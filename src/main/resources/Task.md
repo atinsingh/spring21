@@ -20,3 +20,7 @@ class Game {
     }
 }
 ```
+create bean of Game and play the game, 
+please do create any bean manually, use auto-wiring concept for this 
+excercise
+
