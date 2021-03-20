@@ -4,11 +4,12 @@ import io.pragra.springlearning.spring2.config.AnotherConfig;
 import io.pragra.springlearning.spring2.config.AppConfig;
 import io.pragra.springlearning.spring2.domain.Guest;
 import io.pragra.springlearning.spring2.service.GuestBookService;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-
+@SpringBootApplication
 public class Spring2Application {
     public static void main(String[] args) {
 

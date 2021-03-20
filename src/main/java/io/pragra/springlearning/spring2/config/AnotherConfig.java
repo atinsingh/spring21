@@ -1,6 +1,7 @@
 package io.pragra.springlearning.spring2.config;
 
 import io.pragra.springlearning.spring2.domain.Address;
+import io.pragra.springlearning.spring2.domain.Phone;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Random;
@@ -12,5 +13,10 @@ public class AnotherConfig {
         Address address =  new Address();
         address.setId(new Random().nextInt(10000));
         return address;
+    }
+
+    @Bean
+    Phone phone(){
+        return new Phone();
     }
 }

@@ -3,8 +3,7 @@ package io.pragra.springlearning.spring2.domain;
 import lombok.*;
 
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class Guest {
     private int id;
     @NonNull
