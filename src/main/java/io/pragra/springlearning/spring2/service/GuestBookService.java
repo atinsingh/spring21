@@ -2,12 +2,13 @@ package io.pragra.springlearning.spring2.service;
 
 import io.pragra.springlearning.spring2.domain.Guest;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-
+@Component
 public class GuestBookService {
     private List<Guest> guests = new ArrayList<>();
 
