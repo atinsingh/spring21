@@ -5,5 +5,19 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
+    <bean scope="prototype" name="guest" class="io.pragra.springlearning.spring2.domain.Guest">
+        <property name="id" value="#{new java.util.Random().nextInt(1000000)}"></property>
+        <property name="firstName" value="Prakash"></property>
+        <property name="lastName" value="Makhijani"></property>
+        <property name="address" ref="address"></property>
+    </bean>
+    <bean name="address" class="io.pragra.springlearning.spring2.domain.Address">
+        <property name="id" value="#{new java.util.Random().nextInt(1000000)}"></property>
+        <property name="city" value="Mississauga"></property>
+        <property name="postCode" value="L6Y238"></property>
+        <property name="type" value="HOME"></property>
+    </bean>
 
+    <bean name="format" class="java.text.NumberFormat" factory-method="getInstance"></bean>
+    <bean init-method="init" destroy-method="destroy" name="guestBookService" class="io.pragra.springlearning.spring2.service.GuestBookService"></bean>
 </beans>

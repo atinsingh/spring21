@@ -7,8 +7,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
+
 public class GuestBookService {
     private List<Guest> guests = new ArrayList<>();
+
+
+    public void init() {
+        log.info("I am initializing the bean for the guest book service");
+    }
+
+    public void destroy() {
+        log.info("Removing all resource before bean get destroyed");
+    }
 
     public boolean addGuest(Guest guest) {
         log.info("Adding Guest : {} to guest book", guest);
@@ -17,5 +27,8 @@ public class GuestBookService {
     public boolean deleteGuest(Integer id) {
         log.info("Removing  Guest with ID  : {} to guest book", id);
         return guests.removeIf(guest -> guest.getId()==id);
+    }
+    public void printGuest() {
+        System.out.println(guests);
     }
 }
